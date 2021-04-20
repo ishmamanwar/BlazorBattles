@@ -2,11 +2,9 @@
 
 @code {
 
-    [Parameter]
-    public EventCallback<int> BananasAdded { get; set; }
 
     public void IncreaseBananaCount()
     {
-        BananasAdded.InvokeAsync(10);
+        
     }
 }
