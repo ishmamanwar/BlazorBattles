@@ -1,8 +1,10 @@
 ﻿<div class="top-menu">
     <img src="icons/I_C_Banana.png" /> @Bananas
+    <AddBananas />
 </div>
 
 
 @code {
+    [Parameter]
     public int Bananas { get; set; } = 100;
 }
