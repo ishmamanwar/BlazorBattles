@@ -45,4 +45,9 @@
         UnitService.AddUnit(selectedUnitId);
     }
 
+    protected override async Task OnInitializedAsync()
+    {
+        await UnitService.LoadUnitsAsync();
+    }
+
 }
