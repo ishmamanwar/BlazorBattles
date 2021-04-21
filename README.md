@@ -27,6 +27,10 @@
  - **Battle history**
 
 
-*dotnet watch run*
+*
+cd BlazorBattles
+cd Server
+dotnet watch run
+*
 
 
