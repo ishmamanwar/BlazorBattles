@@ -1,4 +1,4 @@
-# Blazor Battles Game Project by EVOLVE Projects
+# Blazor Battles Game Project by EVOLVE Projects (Ishmam Anwar)
 
 ## Tech Used
 
