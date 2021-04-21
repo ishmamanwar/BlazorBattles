@@ -16,7 +16,7 @@ namespace BlazorBattles.Shared
         public string Password { get; set; }
         [Compare("Password", ErrorMessage = "The passwords do not match")]
         public string ConfirmPassword { get; set; }
-        [Range(0, 100, ErrorMessage = "Please choose a number between 0 and 1000")]
+        [Range(0, 1000, ErrorMessage = "Please choose a number between 0 and 1000")]
         public int Bananas { get; set; } = 100;
         public string StartUnitId { get; set; } = "1";
         public DateTime DateOfBirth { get; set; } = DateTime.Now;

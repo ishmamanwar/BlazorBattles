@@ -48,10 +48,11 @@
         <InputDate id="dateOfBirth" @bind-Value="user.DateOfBirth" class="form-control" />
     </div>
     <div class="form-check">
-        <label for="confirmed">Confirmed</label>
         <InputCheckbox id="confirmed" @bind-Value="user.IsConfirmed" class="form-check-input" />
+        <label for="confirmed">Confirmed</label>
         <ValidationMessage For="@(() => user.IsConfirmed)" />
     </div>
+    <button type="submit" class="btn btn-primary">Register</button>
 </EditForm>
 
 @code {
