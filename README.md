@@ -1,0 +1,2 @@
+# BlazorBattles
+dotnet watch run
