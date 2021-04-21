@@ -19,7 +19,7 @@ namespace BlazorBattles.Server.Controllers
         };
 
         [HttpGet]
-        public IActionResult GetUnit()
+        public async Task<IActionResult> GetUnit()
         {
             return Ok(Units);
         }
