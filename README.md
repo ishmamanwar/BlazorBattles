@@ -16,7 +16,6 @@
  - Clean up for demo
  - Create Documentation
 
-
 *
 cd BlazorBattles
 cd Server
