@@ -72,10 +72,11 @@ namespace BlazorBattles.Server.Controllers
                 result.RoundsFought = currentRound;
 
 
-                if (result.RoundsFought > 0)
-                    await FinishFight(attacker, opponent, result, attackerDamageSum, opponentDamageSum);
+                
                 
             }
+            if (result.RoundsFought > 0)
+                await FinishFight(attacker, opponent, result, attackerDamageSum, opponentDamageSum);
         }
         private int FightRound(User attacker, User opponent,
                 List<UserUnit> attackerArmy, List<UserUnit> opponentArmy, BattleResult result)
@@ -129,10 +130,22 @@ namespace BlazorBattles.Server.Controllers
                 attacker.Defeats++;
                 opponent.Victories++;
                 attacker.Bananas += opponentDamageSum *10;
-                opponent.Bananas = attackerDamageSum;
+                opponent.Bananas += attackerDamageSum;
             }
-
+            StoreBattleHistory(attacker, opponent, result);
             await _context.SaveChangesAsync();
+        }
+
+        private void StoreBattleHistory(User attacker, User opponent, BattleResult result)
+        {
+            var battle = new Battle();
+            battle.Attacker = attacker;
+            battle.Opponent = opponent;
+            battle.RoundsFought = result.RoundsFought;
+            battle.WinnerDamage = result.IsVictory ? result.AttackerDamageSum : result.OpponentDamageSum;
+            battle.Winner = result.IsVictory ? attacker : opponent;
+
+            _context.Battles.Add(battle);
         }
     }
 }
