@@ -20,7 +20,7 @@
 
 
 ## Demo
- - https://github.com/ishmamanwar/BlazorBattles-blazor-.net-core/blob/master/Blazor%20Battles%20Trim.mp4
+ - https://github.com/ishmamanwar/BlazorBattles-blazor-.net-core/blob/master/Blazor%20Battles%20Trim.mp4 (Click View Raw)
 
 ## App Overview
 
