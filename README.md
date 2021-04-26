@@ -18,6 +18,10 @@
  - Necessary Validations are done on the client and the server side
  - Error and Success messages are provided with Toast Services
 
+
+## Demo
+ - https://github.com/ishmamanwar/BlazorBattles-blazor-.net-core/blob/master/Blazor%20Battles%20Trim.mp4
+
 ## App Overview
 
  - Register for an account/ Login to your account
